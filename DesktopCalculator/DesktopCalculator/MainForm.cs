@@ -10,7 +10,8 @@ namespace DesktopCalculator
         public MainForm()
         {
             InitializeComponent();
-            Operator = "";
+            Operator = "1";
+            LastMove = "1";
         }
 
         private void Clear_Click(object sender, EventArgs e)

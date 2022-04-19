@@ -212,6 +212,7 @@
             this.Decimal.TabIndex = 16;
             this.Decimal.Text = "DEC";
             this.Decimal.UseVisualStyleBackColor = true;
+            this.Decimal.Click += new System.EventHandler(this.Decimal_Click);
             // 
             // Clear
             // 

@@ -48,7 +48,7 @@ namespace DesktopCalculator
             }
             else
             {
-                Input.Text += "1";
+                Input.Text += "0";
             }
             LastMove = "Number";
         }
@@ -336,6 +336,21 @@ namespace DesktopCalculator
             {
                 Input.Text = "Error";
             }
+        }
+        private void Decimal_Click(object sender, EventArgs e)
+        {
+            double result = 0;
+            Operation.Text = $"DEC({ Input.Text})";
+            List<char> bin = Input.Text.ToList();
+            bin.Reverse();
+            foreach(char a in bin)
+            {
+                if (a.ToString().Equals("1"))
+                {
+                    result += Math.Pow(2, bin.IndexOf(a));
+                }
+            }
+            Input.Text = result.ToString();
         }
 
         // Help Function

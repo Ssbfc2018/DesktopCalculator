@@ -296,6 +296,48 @@ namespace DesktopCalculator
             }
         }
 
+        // Additional Function
+        private void Binary_Click(object sender, EventArgs e)
+        {
+            int n;
+            if (Int32.TryParse(Input.Text,out n))
+            {
+                if (n > 0)
+                {
+                    List<int> resultList = new List<int> {};
+                    int num = Int32.Parse(Input.Text);
+                    while (num != 0)
+                    {
+                        if (num % 2 == 0)
+                        {
+                            resultList.Add(0);
+                        }
+                        else
+                        {
+                            resultList.Add(1);
+                        }
+                        num /= 2;
+                    }
+                    Operation.Text = $"BIN({ Input.Text})";
+                    resultList.Reverse();
+                    string result = "";
+                    for (int i = 0; i < resultList.Count; i++)
+                    {
+                        result += resultList[i].ToString();
+                    }
+                    Input.Text = result;
+                }
+                else
+                {
+                    Input.Text = "Error";
+                }
+            }
+            else
+            {
+                Input.Text = "Error";
+            }
+        }
+
         // Help Function
         private Boolean isOperator(string a)
         {

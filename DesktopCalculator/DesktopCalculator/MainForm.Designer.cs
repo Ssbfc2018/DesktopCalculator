@@ -292,6 +292,7 @@
             this.Binary.TabIndex = 17;
             this.Binary.Text = "BIN";
             this.Binary.UseVisualStyleBackColor = true;
+            this.Binary.Click += new System.EventHandler(this.Binary_Click);
             // 
             // label1
             // 

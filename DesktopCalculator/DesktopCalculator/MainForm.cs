@@ -238,16 +238,30 @@ namespace DesktopCalculator
         // Operator Button
         private void Addition_Click(object sender, EventArgs e)
         {
-            if (isOperator(Operator))
-            {
-                Operator = "+";
-            }
-            else
-            {
-                Answer = double.Parse(Input.Text);
-                Operator = "+";
-                Operation.Text = $"{ Answer}{ Operator}";
-            }
+            Operator = "+";
+            Answer = double.Parse(Input.Text);
+            Operation.Text = $"{ Answer}{ Operator}";
+            LastMove = "Operator";
+        }
+        private void Subtraction_Click(object sender, EventArgs e)
+        {
+            Operator = "-";
+            Answer = double.Parse(Input.Text);
+            Operation.Text = $"{ Answer}{ Operator}";
+            LastMove = "Operator";
+        }
+        private void Multiplication_Click(object sender, EventArgs e)
+        {
+            Operator = "¡Á";
+            Answer = double.Parse(Input.Text);
+            Operation.Text = $"{ Answer}{ Operator}";
+            LastMove = "Operator";
+        }
+        private void Division_Click(object sender, EventArgs e)
+        {
+            Operator = "-";
+            Answer = double.Parse(Input.Text);
+            Operation.Text = $"{ Answer}{ Operator}";
             LastMove = "Operator";
         }
         private void Equal_Click(object sender, EventArgs e)
@@ -292,5 +306,6 @@ namespace DesktopCalculator
             }
             return false;
         }
+
     }
 }

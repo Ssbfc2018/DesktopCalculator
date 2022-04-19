@@ -183,6 +183,7 @@
             this.Subtraction.TabIndex = 13;
             this.Subtraction.Text = "-";
             this.Subtraction.UseVisualStyleBackColor = true;
+            this.Subtraction.Click += new System.EventHandler(this.Subtraction_Click);
             // 
             // Equal
             // 
@@ -230,6 +231,7 @@
             this.Division.TabIndex = 19;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
+            this.Division.Click += new System.EventHandler(this.Division_Click);
             // 
             // Multiplication
             // 
@@ -239,6 +241,7 @@
             this.Multiplication.TabIndex = 20;
             this.Multiplication.Text = "×";
             this.Multiplication.UseVisualStyleBackColor = true;
+            this.Multiplication.Click += new System.EventHandler(this.Multiplication_Click);
             // 
             // Addition
             // 
